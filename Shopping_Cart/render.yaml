@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: springboot-demo
+    env: java
+    plan: free
+    buildCommand: mvn clean package
+    startCommand: java -jar target/Shopping_Cart-0.0.1-SNAPSHOT.jar
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: default
